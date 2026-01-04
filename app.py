@@ -92,4 +92,4 @@ if st.button("🔍 Analyze Resume"):
             st.success("Your resume matches well with the job description")
             st.warning("Strong match score")
 st.markdown("---")
-st.caption("Internship Project | Smart Resume Analyzer")
+st.caption("Internship Project | Smart Resume Analyzer | Team Grip x")
