@@ -1,15 +1,12 @@
-# Smart Resume Analyzer - Beginner Friendly Web App
-# Run with: streamlit run app.py
+
+# Run streamlit run app.py
 
 import streamlit as st
 from PyPDF2 import PdfReader
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# -------------------------------
-# Helper functions
-# -------------------------------
-
+# extract pdf
 def extract_text_from_pdf(uploaded_file):
     reader = PdfReader(uploaded_file)
     text = ""
@@ -42,9 +39,7 @@ def calculate_match(resume_text, jd_text):
     score = cosine_similarity(vectors)[0][1]
     return round(score * 100, 2)
 
-# -------------------------------
-# Streamlit UI
-# -------------------------------
+# ui
 
 st.set_page_config(page_title="Smart Resume Analyzer", layout="centered")
 
